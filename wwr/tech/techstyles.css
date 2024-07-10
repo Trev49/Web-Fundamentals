@@ -64,7 +64,7 @@ main section img {
 }
 
 body {
-    background-color: #fcfbfb;
+    background-color: #F9DEC9;
     font-family: "Ubuntu Sans Mono", sans-serif, Arial, Helvetica;
     font-size: 22px;
     margin: 0;
@@ -100,11 +100,11 @@ nav a:hover {
 }
 
 #background {
-    background-color: #3a405a;
+    background-color: #9d8420;
 }
 
 .msg {
-    background-color: #9d8420;
+    background-color: #3a405a;
     line-height: 1.5em;
     padding: 35px;
     grid-column: 6/10;
@@ -114,7 +114,7 @@ nav a:hover {
 
 .msg p {
     color: white;
-    font-size: .8em;
+    font-size: .9em;
     padding-bottom: 15px;
 }
 
