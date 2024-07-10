@@ -38,7 +38,7 @@ nav {
 #hero-box {
     grid-column: 1/4;
     grid-row: 1/3;
-    filter: brightness(30%);
+    filter: brightness(20%);
     z-index: -1;
 }
 
