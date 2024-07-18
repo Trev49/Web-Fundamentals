@@ -13,16 +13,39 @@
 }
 
 body {
-    /* Center the form on the page */
+  background-color:#F9DEC9;
+  font-family: "Ubuntu Sans Mono", sans-serif, Arial, Helvetica;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+nav a:hover {
+    background-color: black;
+    color: aquamarine;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
     text-align: center;
-  }
+    color: white;
+    text-decoration: none;
+    padding: 35px;
+    height: 35px;
+}
   
   form {
     display: inline-block;
     /* Form outline */
     padding: 1em;
     border: 1px solid #ccc;
-    border-radius: 1em;
+    border-radius: 2em;
+    text-align: center;
   }
   
   ul {
@@ -77,3 +100,38 @@ body {
        between the labels and their text fields */
     margin-left: 0.5em;
   }
+
+header {
+    background-color:rgba(20,30,13, .7);
+    display: grid;
+    height: 100px;
+    grid-template-columns: 150px auto;
+}
+footer {
+    background-color: rgba(20,30,13, .7);
+    color: white;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: yellow;
+}
+.logo {
+    width: 100px;
+    height: 95px;
+}
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+#privacy {
+  font-size: 8px;
+}

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
-    <link type="text/css" rel="stylesheet" href="forms.css" />
+    <link type="text/css" rel="stylesheet" href="contactus.css" />
 </head>
 
 <body>
   <header>
     <a id="logo_link" href="index.html">
-        <img src="Logo.jpeg" alt="Logo image">
+        <img class = "logo" src="Logo.jpeg" alt="Logo image">
     </a>
     <nav>
         <a href="index.html">Home</a>
@@ -21,6 +21,7 @@
 </header>
 
 <h1>Contact Us</h1>
+<p>Have questions? Want to learn more? Please fill out the information below. We will reach out with two business days.</p>
     <div id="feedback"></div>
     <form action="/my-handling-form-page" method="post">
         <ul>
@@ -41,7 +42,7 @@
           </li>
         </ul>
       </form>
-
+      <p id="privacy">Note: Data entered is protected under our privacy policy and will never be shared with anyone.</p>
       <script>
         // get the feedback div element so we can do something with it.
         const feedbackElement = document.getElementById('feedback');
@@ -77,6 +78,5 @@
       </a>
   </div>
 </footer>
-</div>
 </body>
 </html>
