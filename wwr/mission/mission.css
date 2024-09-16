@@ -1,0 +1,35 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+h1 {
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+h2 {
+    color:#006EB6;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 4px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid gray;
+    text-transform: capitalize;
+}
+p {
+    text-align: left;
+}
+li {
+    margin-bottom: 20px;
+    margin-left: 75px;
+}
+img.logo {
+    height: 150px;
+    width: 170px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+}
