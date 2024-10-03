@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: white;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, san-serif;
+ }
+ body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+  }
+  a:link,
+  a:visited {
+    color: var(--accent-color);
+  }
+
+img {
+	max-width: 100%;
+}
+nav {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    gap: 100px;
+}
+ul li a {
+    color: white; 
+    text-decoration: none; 
+}
+header {
+background-color: blueviolet;
+padding-bottom: 40px;
+}
+footer {
+    background-color: blueviolet;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+main {
+    background-color: beige;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-left: 50px;
+}
+h2 {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+}
+footer p {
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.gallery figure {
+    border: 2px solid #ccc; 
+    padding: 5px; 
+    
+}
+.menu-button {
+    background: none; 
+    border: none; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+    padding: 0; 
+    text-align: left; 
+}
+
+
+
+
+/* Show links when the menu button is clicked (use JavaScript later to toggle this) */
+.nav-links.active {
+    display: block; /* Show links when active */
+}
+@media screen and (max-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-links {
+        display: none;
+    
+    }
+    ul {
+        list-style: none;
+        display: block;
+        justify-content: center;
+        font-size: 20px;
+        gap: 100px;
+    }
+
+  }
+@media screen and (max-width: 700px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    .gallery figure {
+        width: 100%; /* Ensure the figure takes full width of the gallery column */
+        max-width: 100%; /* Prevent figure from becoming wider than its container */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center;
+      }
+    .nav-links {
+        display: none; 
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .menu-button {
+        display: none; 
+    }
+}
