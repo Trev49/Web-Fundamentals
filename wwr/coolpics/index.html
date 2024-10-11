@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="coolpics.css">
 </head>
 <body>
+    
 <header>
     <h1>Cool Pics 📷</h1>
     <nav>
@@ -27,31 +28,31 @@
     <h2>Current Work</h2>
     <section class="gallery">
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
     <figure>  
-        <img src="norris-sm.jpeg" alt="picture">
+        <img src="norris-sm.jpeg" alt="" onclick="viewerTemplate(this.src, this.alt)">
     </figure>
 </section>
 
@@ -61,5 +62,13 @@
     <p>©2023 Not a real site</p>
 </footer>
 <script src="coolpics..js"></script>
+<div id="Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" alt="Modal Image">
+        <div id="caption"></div>
+    </div>
+</div>
+
 </body>
 </html>
