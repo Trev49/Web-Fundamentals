@@ -1,0 +1,131 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Layout styling */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column; /* Stacks the books vertically */
+}
+
+.book-details {
+    display: flex; /* Using Flexbox to align book-info and book-content side by side */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Adds spacing between books */
+}
+
+.book-info {
+    flex: 1; /* Takes up 1 part of the space */
+    margin-right: 20px; /* Adds space between book-info and book-content */
+    max-width: 200px; /* Optional: Limit the width of the book details */
+}
+
+.book-content {
+    flex: 2; /* Takes up 2 parts of the space */
+}
+
+.book-content img {
+    max-width: 50%;
+    margin-bottom: 20px;
+}
+
+.filters {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    grid-column: 2 / 3; /* Ensures the filters stay in the second grid column */
+}
+
+
+.filters form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters label {
+    margin-top: 10px;
+}
+
+.filters select {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px; 
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 5px;
+    transition: top 0.3s ease-in-out; 
+}
+
+.skiptocontent a:focus {
+    top: 0; 
+}
+
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; 
+    }
+
+    .book-details {
+        grid-template-columns: 1fr; 
+    }
+
+    .book-info {
+        border-right: none;
+        padding-right: 0;
+    }
+}
