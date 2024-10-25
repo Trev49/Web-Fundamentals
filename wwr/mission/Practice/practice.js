@@ -1,67 +1,55 @@
-let tasks = [];
-
-function taskTemplate(task) {
-  return `
-    <li ${task.completed ? 'class="strike"' : ""}>
-      <p>${task.detail}</p>
-      <div>
-        <span data-function="delete">❎</span>
-        <span data-function="complete">✅</span>
-      </div>
-    </li>`
+function getGrades(inputSelector) {
+  // get grades from the input box
+  const grades = document.querySelector(inputSelector).value;
+  // split them into an array (String.split(','))
+  const gradesArray = grades.split(",");
+  // clean up any extra spaces, and make the grades all uppercase. (Array.map())
+  const cleanGrades = gradesArray.map((grade) => grade.trim().toUpperCase());
+  console.log(cleanGrades);
+  // return grades
+  return cleanGrades;
 }
 
-function renderTasks(tasks) {
-  // get the list element from the DOM
-  const listElement = document.querySelector("#todoList");
-  listElement.innerHTML = "";
-  // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
-  const html = tasks.map(taskTemplate).join("");
-  listElement.innerHTML = html;
-}
-
-function newTask() {
-  // get the value entered into the #todo input
-  const task = document.querySelector("#todo").value;
-  // add it to our arrays tasks
-  tasks.push({ detail: task, completed: false });
-  // render out the list
-  renderTasks(tasks);
-}
-
-function removeTask(taskElement) {
-  // Notice how we are using taskElement instead of document as our starting point?
-  // This will restrict our search to the element instead of searching the whole document.
-  tasks = tasks.filter(
-    (task) => task.detail != taskElement.querySelector('p').innerText
-  );
-  taskElement.remove();
-}
-
-function completeTask(taskElement) {
-  const taskIndex = tasks.findIndex(
-    (task) => task.detail === taskElement.querySelector('p').innerText
-  );
-  tasks[taskIndex].completed = tasks[taskIndex].completed ? false : true;
-  taskElement.classList.toggle("strike");
-  console.log(tasks);
-}
-
-function manageTasks(e) {
-  // did they click the delete or complete icon?
-  console.log(e.target);
-  const parent = e.target.closest("li");
-  if (e.target.dataset.action === "delete") {
-    removeTask(parent);
+function lookupGrade(grade) {
+  // converts the letter grade to it's GPA point value and returns it
+  let points = 0;
+  if (grade === "A") {
+    points = 4;
+  } else if (grade === "B") {
+    points = 3;
+  } else if (grade === "C") {
+    points = 2;
+  } else if (grade === "D") {
+    points = 1;
   }
-  if (e.target.dataset.action === "complete") {
-    completeTask(parent);
-  }
+  return points;
 }
 
-// Add your event listeners here
-document.querySelector("#submitTask").addEventListener("click", newTask);
-document.querySelector("#todoList").addEventListener("click", manageTasks);
+function calculateGpa(grades) {
+  // gets a list of grades passed in
+  // convert the letter grades to gpa points
+  const gradePoints = grades.map((grade) => lookupGrade(grade));
+  // calculates the GPA
+  const gpa =
+    gradePoints.reduce((total, num) => total + num) / gradePoints.length;
+  // return the GPA
+  return gpa.toFixed(2);
+}
 
-// render  the initial list of tasks (if any) when the page loads
-renderTasks(tasks);
+function outputGpa(gpa, selector) {
+  // takes a gpa value and displays it in the HTML in the element identified by the selector passed in
+  const outputElement = document.querySelector(selector);
+  outputElement.innerText = gpa;
+}
+
+function clickHandler() {
+  // when the button in our html is clicked
+  // get the grades entered into the input
+  const grades = getGrades("#grades");
+  // calculate the gpa from the grades entered
+  const gpa = calculateGpa(grades);
+  // display the gpa
+  outputGpa(gpa, "#output");
+}
+
+document.querySelector("#submitButton").addEventListener("click", clickHandler);

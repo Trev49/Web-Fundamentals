@@ -1,97 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cool Pics 📷</title>
-    <meta name="description" content="Testing some media querries.">
-    <meta name="author" content="Trevor deBernardi">
-    <link rel="stylesheet" href="blog.css">
-</head>
-<body>
+    <meta name="description" content="Testing some media querries." />
+    <meta name="author" content="Trevor deBernardi" />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
     <header>
-        <h1>Kids Read for Fun</h1>
-        <div class="skiptocontent">
-            <a href="#maincontent">skip to main content</a>
-          </div>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Archive</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
-        </nav>
+      <h1>Kids Read for Fun</h1>
+      <div class="skiptocontent">
+        <a href="#maincontent">skip to main content</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Main Content Area -->
     <main id="maincontent">
-        <!-- Books Container -->
-        <div class="book-container">
-            <!-- Book 1: Septimus Heap -->
-<section class="book-details">
-    <!-- Book Info on the left -->
-    <div class="book-info">
-        <p>July 5, 2022</p>
-        <p>Age: 10-14</p>
-        <p>Genre: Fantasy</p>
-        <p>Rating: ★★★★</p>
-    </div>
-    <div class="book-content">
-        <h2>Septimus Heap Book One: Magyk</h2>
-        <img src="Magyk.jpeg" alt="Book cover for Septimus Heap">
-        <p>If you enjoy stories about the seventh son of seventh sons and magyk, this is the book for you!</p>
-    </div>
-</section>
+      <div class="book-container"></div>
 
+      <!-- Filters Section (Stays on the right) -->
+      <aside class="filters">
+        <form>
+          <label for="sort">Sort:</label>
+          <select id="sort">
+            <option value="date">Date</option>
+            <option value="rating">Rating</option>
+          </select>
 
-<section class="book-details">
-    <div class="book-info">
-        <p>December 12, 2021</p>
-        <p>Age: 12-16</p>
-        <p>Genre: Fantasy</p>
-        <p>Rating: ★★★★☆</p>
-    </div>
+          <label for="age">Age:</label>
+          <select id="age">
+            <option value="10-14">10-14</option>
+            <option value="15-18">15-18</option>
+          </select>
 
-    <!-- Book Content on the right -->
-    <div class="book-content">
-        <h2>Magnus Chase Book One: The Sword of Summer</h2>
-        <img src="magnus-chase.jpg" alt="Book cover for Magnus Chase">
-        <p>In this first book of the Magnus Chase series, Rick Riordan explores Norse mythology...</p>
-    </div>
-</section>
+          <label for="genre">Genre:</label>
+          <select id="genre">
+            <option value="fantasy">Fantasy</option>
+            <option value="adventure">Adventure</option>
+          </select>
 
-        </div>
-    
-        <!-- Filters Section (Stays on the right) -->
-        <aside class="filters">
-            <form>
-                <label for="sort">Sort:</label>
-                <select id="sort">
-                    <option value="date">Date</option>
-                    <option value="rating">Rating</option>
-                </select>
-    
-                <label for="age">Age:</label>
-                <select id="age">
-                    <option value="10-14">10-14</option>
-                    <option value="15-18">15-18</option>
-                </select>
-    
-                <label for="genre">Genre:</label>
-                <select id="genre">
-                    <option value="fantasy">Fantasy</option>
-                    <option value="adventure">Adventure</option>
-                </select>
-    
-                <label for="rating">Rating:</label>
-                <select id="rating">
-                    <option value="4">★★★★</option>
-                    <option value="5">★★★★★</option>
-                </select>
-            </form>
-        </aside>
+          <label for="rating">Rating:</label>
+          <select id="rating">
+            <option value="4">★★★★</option>
+            <option value="5">★★★★★</option>
+          </select>
+        </form>
+      </aside>
     </main>
-    
+
     <script src="blog.js"></script>
-</body>
+  </body>
 </html>

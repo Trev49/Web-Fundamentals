@@ -47,9 +47,17 @@ main {
     padding: 20px;
 }
 
+h2 {
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
 .book-container {
     display: flex;
-    flex-direction: column; /* Stacks the books vertically */
+    flex-direction: column;
+    gap: 20px; /* Add spacing between articles */
+    grid-column: 1 / 2; /* Occupy the first column of the grid */
+    width: 100%;
 }
 
 .book-details {
@@ -61,25 +69,44 @@ main {
 }
 
 .book-info {
-    flex: 1; /* Takes up 1 part of the space */
-    margin-right: 20px; /* Adds space between book-info and book-content */
-    max-width: 200px; /* Optional: Limit the width of the book details */
+    flex: 1;
+    margin-right: 20px;
+}
+
+.date {
+    font-size: 20px;
+    text-align: right;
+}
+
+.title {
+    text-align: right;
 }
 
 .book-content {
-    flex: 2; /* Takes up 2 parts of the space */
+    flex: 2; 
+    border-left: 3px solid tan;
+    padding-left: 15px;
 }
 
 .book-content img {
+    display: block;
     max-width: 50%;
     margin-bottom: 20px;
+    margin-left: 80px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    
 }
 
 .filters {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    grid-column: 2 / 3; /* Ensures the filters stay in the second grid column */
+    grid-column: 2 / 3;
+    border-bottom: 3px solid tan;
+    border-top: 3px solid tan;
+    border-right: 3px solid tan;
+    border-left: 3px solid tan;
 }
 
 
