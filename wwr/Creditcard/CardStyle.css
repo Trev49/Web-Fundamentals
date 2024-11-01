@@ -1,0 +1,210 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+/* Form container styling */
+.form-container {
+  display: grid;
+  grid-template-areas: 
+      "back-card"
+      "front-card"
+      "button";
+  gap: 20px;
+  position: relative;
+  width: 320px;
+}
+
+/* Card styling (front and back) */
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
+  color: #333;
+  width: 300px;
+  height: 200px;
+}
+
+/* Front card layout */
+.card-front {
+  grid-area: front-card;
+  display: grid;
+  grid-template-areas: 
+      "total total total"
+      "card-number card-number card-image"
+      "card-holder label-exp label-exp"
+      "card-holder input-mm input-yy"; /* Update for expiration inputs */
+  grid-template-columns: 7fr 1fr 1fr;
+  gap: 10px;
+  position: relative;
+  padding: 20px;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  right: 50px;
+}
+
+/* Back card styling */
+.card-back {
+  grid-column: 2;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+  background-color: #d1d1d1;
+  position: absolute;
+  top: 50px;
+  left: -315px;
+  width: 370px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2);
+  color: #333;
+  z-index: 0;
+  padding-right: 0px;
+}
+
+/* Total price styling */
+.total {
+  grid-area: total;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Card number styling */
+.card-number-section {
+  grid-area: card-number;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Card image placement */
+.card-image {
+  grid-row: 1;
+  width: 40px;
+  height: auto;
+  align-self: start;
+  justify-self: end;
+}
+
+/* Card holder styling */
+.card-holder-section {
+  grid-area: card-holder;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Expiration section styling */
+.expiration-section {
+  grid-area: label-exp; /* Assign to grid area */
+  grid-column: 2 / 4; /* Span from column 2 to 3 */
+  justify-self: end; /* Align to the right */
+}
+
+/* Expiration label styling */
+.label-exp {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Expiration inputs */
+.input-mm {
+  grid-area: input-mm; /* Place in designated grid area */
+}
+
+.input-yy {
+  grid-area: input-yy; /* Place in designated grid area */
+}
+
+/* Input fields general styling */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  grid-column: 2;
+  grid-row: 3;
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #ddd;
+}
+
+/* CVC field positioning on back card */
+.card-back label,
+.card-back input {
+  grid-column: 2; 
+}
+
+.card-back label {
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.card-back input {
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 8px;
+  width: 80px;
+}
+input#card-number {
+  width: 120%;
+}
+input#card-holder {
+  width: 80%;
+  margin-top: 2px;
+}
+label {
+  font-size: 15px;
+}
+
+input#expiry-month.input-mm, input#expiry-year.input-yy {
+  width: 20%;
+  margin-left: 35px;
+}
+label#Expire {
+  margin-left: 35px;
+}
+input#expiry-year.input-yy {
+  margin-right: -80px;
+  margin-left: 10px;
+}
+#card-stripe {
+  width: 100%;
+  height: 55px;
+  background-color: #3d5266;
+  grid-column: 1/3;
+  margin-bottom: 100px;
+}
+input#cvc {
+  margin-right: 20px;
+}
+label#CVC_box {
+  margin-right: 35px;
+}
