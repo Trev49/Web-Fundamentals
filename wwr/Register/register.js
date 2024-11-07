@@ -11,9 +11,9 @@ document.getElementById('add').addEventListener('click', addParticipant);
 
 // Function to add a new participant section
 function addParticipant() {
-    participantCount++; // Increment participant count
-    const newParticipantHTML = participantTemplate(participantCount); // Generate new participant HTML
-    document.getElementById('add').insertAdjacentHTML('beforebegin', newParticipantHTML); // Insert new HTML before the add button
+    participantCount++; 
+    const newParticipantHTML = participantTemplate(participantCount); 
+    document.getElementById('add').insertAdjacentHTML('beforebegin', newParticipantHTML); 
 }
 
 // Add event listener to form submission
@@ -29,10 +29,10 @@ function totalFees() {
 
 // Function to handle form submission
 function submitForm(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
     
-    const adultName = document.getElementById('adult_name').value; // Get adult name
-    const totalFeesAmount = totalFees(); // Calculate total fees
+    const adultName = document.getElementById('adult_name').value;
+    const totalFeesAmount = totalFees(); 
 
     // Create success message using the imported successTemplate function
     const message = successTemplate({
@@ -42,8 +42,8 @@ function submitForm(event) {
     });
 
     // Hide form and show summary
-    document.querySelector('form').style.display = 'none'; // Hide the form
-    const summaryElement = document.getElementById('summary'); // Select the summary element
-    summaryElement.textContent = message; // Set summary message
-    summaryElement.style.display = 'block'; // Show summary
+    document.querySelector('form').style.display = 'none'; 
+    const summaryElement = document.getElementById('summary'); 
+    summaryElement.textContent = message; 
+    summaryElement.style.display = 'block'; 
 }

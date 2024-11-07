@@ -1,4 +1,4 @@
-// Templates.js
+
 
 // Function to generate participant HTML template
 export function participantTemplate(count) {
