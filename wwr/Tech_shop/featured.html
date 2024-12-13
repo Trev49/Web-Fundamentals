@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Trevor deBernardi" />
+    <meta
+      name="description"
+      content="Explore a variety of delicious recipes and share your favorites with friends. Discover easy-to-make dishes and find inspiration for every meal!"
+    />
+
+    <title>Featured</title>
+    <link
+      rel="icon"
+      href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+      type="image/png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+      color="#111"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="featured.css" />
+    <script type="module" src="featured.js"></script>
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Recipe Book" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Discover delicious recipes and share them with your friends!"
+    />
+    <meta property="og:image" content="images/recipe-placeholder.jpg" />
+    <meta
+      property="og:url"
+      content="https://trev49.github.io/Web-Fundamentals/wwr/Tech_shop/index.html"
+    />
+    <meta name="twitter:card" content="images/apple-crisp.jpg" />
+  </head>
+  <body>
+    <header>
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/Logo.jpeg" alt="Logo image" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="featured.html">Featured</a>
+        <a href="contactus.html">Contact us</a>
+      </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <form id="search-form">
+      <input
+        type="text"
+        placeholder="Find a device"
+        aria-label="Search recipes"
+      />
+      <button type="submit" aria-label="Search">
+        <img src="images/search.svg" alt="Search Icon" />
+      </button>
+    </form>
+
+    <hr class="divider" />
+    <h2 id="Items">Featured item</h2>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Recipe Card -->
+      <section class="recipe-card">
+        <img
+          src="images/Optimized_Tablet.jpg"
+          alt="Surface Pro"
+          class="recipe-image"
+        />
+        <div class="recipe-details">
+          <span class="recipe-tag">dessert</span>
+          <h2 class="recipe-title">Apple Crisp</h2>
+          <!-- Accessible Rating Stars -->
+          <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">☆</span>
+          </div>
+          <p class="recipe-description">
+            This apple crisp recipe is a simple yet delicious fall dessert
+            that's great served warm with vanilla ice cream.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with Attribution and Social Links -->
+    <footer>
+      <p>Debo inc &copy; 20XX - Trevor deBernardi</p>
+      <p><a href="site-plan.html">Site Plan</a></p>
+      <p><a href="contactus.html">Contact Us</a></p>
+      <div class="social">
+        <a href="https://facebook.com" target="_blank">
+          <img src="images/facebook.png" alt="fb icon" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="images/twitter.png" alt="twitter icon" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram.png" alt="instagram icon" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
